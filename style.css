@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+}
+html,
+body {
+    padding: 0;
+    margin: 0;
+
+}
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #899AAA;
+    position: relative;
+    z-index: 10;
+    height: 40px;
+    font-size: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+}
+.container {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    margin-top: -100px;
+    padding-top: 100px;
+    position: relative;
+    width: 100%;
+    backface-visibility: hidden;
+    will-change: overflow;
+}
+.left,
+.middle,
+.right {
+  overflow: auto;
+  height: auto;
+  padding: .5rem;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  font-size: 10px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.left::-webkit-scrollbar,
+.middle::-webkit-scrollbar,
+.right::-webkit-scrollbar {
+    display: none;
+}
+/*  Left and Right are set sizes while the Middle is set to flex one so it occupies all remaining space. This could be set as a width too if prefereable, perhaps using calc.*/
+.left {
+    width: 12.5rem;
+    background-color: indigo;
+}
+
+.middle {
+    flex: 1;
+}
+
+.right {
+    width: 12.5rem;
+    background-color: #E5E9EC;
+}
+.button {
+
+    cursor: pointer;
+}
+.it-bin {
+    width: 65px;
+    font-family: monospace;
+}
+.it-byte {
+    width: 20px;
+    font-family: monospace;
+}
+li {
+  font-family: monospace;
+}
+ul {
+  text-align: right;
+  padding-right: 10px;
+}
+#hex {
+  height: 40px;
+  width: 100%;
+}
